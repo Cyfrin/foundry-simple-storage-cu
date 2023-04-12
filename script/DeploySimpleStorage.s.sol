@@ -6,11 +6,12 @@ import "forge-std/Script.sol";
 import "../src/SimpleStorage.sol";
 
 contract DeploySimpleStorage is Script {
-    function run() external {
+    function run() external returns (SimpleStorage) {
         vm.startBroadcast();
 
-        new SimpleStorage();
+        SimpleStorage simpleStorage = new SimpleStorage();
 
         vm.stopBroadcast();
+        return simpleStorage;
     }
 }
