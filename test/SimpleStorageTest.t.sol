@@ -11,7 +11,6 @@ contract SimpleStorageTest is Test {
 
     function setUp() external {
         DeploySimpleStorage deployer = new DeploySimpleStorage();
-
         simpleStorage = deployer.run();
     }
 

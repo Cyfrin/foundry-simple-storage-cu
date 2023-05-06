@@ -1,4 +1,4 @@
-# Ethers Simple Storage
+# Foundry Simple Storage
 
 This is part of the Cyfrin Solidity Blockchain Course.
 
