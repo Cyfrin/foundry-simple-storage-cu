@@ -2,7 +2,7 @@
 
 This is part of the Cyfrin Solidity Blockchain Course.
 
-Video coming soon...
+*[⭐️ (6:23:59) | Lesson 6 | Foundry Simple Storage](https://www.youtube.com/watch?v=umepbfKp5rI&t=22979s)*
 
 # Getting Started
 
