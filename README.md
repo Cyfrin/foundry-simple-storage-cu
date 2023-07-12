@@ -49,7 +49,7 @@ If you can't or don't want to run and install locally, you can work with this re
 Clone this repo
 
 ```
-git clone https://github.com/PatrickAlphaC/foundry-simple-storage-f23
+git clone https://github.com/Cyfrin/foundry-simple-storage-f23
 cd foundry-simple-storage-f23
 ```
 
