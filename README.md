@@ -90,7 +90,7 @@ forge compile
 5. Deploy your contract
 
 ```
-forge create --private-key <PRIVATE_KEY>
+forge create SimpleStorage --private-key <PRIVATE_KEY>
 ```
 
 ## Windows, WSL, & Ganache
@@ -117,7 +117,7 @@ USE A METAMASK THAT DOESNT HAVE ANY REAL FUNDS IN IT. Just in case you accidenta
 5. Run
 
 ```
-forge create --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
+forge create SimpleStorage --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
 ```
 
 Or, you can use a deploy script!
