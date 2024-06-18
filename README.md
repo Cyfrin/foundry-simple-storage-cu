@@ -2,9 +2,9 @@
 
 This is part of the Cyfrin Updraft Solidity Blockchain Course.
 
-*[Updraft | Foundry Simple Storage](https://updraft.cyfrin.io/courses/foundry/foundry-simple-storage/introduction-foundry-simple-storage)*
+*[⭐️ Updraft | Foundry Simple Storage](https://updraft.cyfrin.io/courses/foundry/foundry-simple-storage/introduction-foundry-simple-storage)*
 
-*[⭐️ YouTube (6:23:59) | Section 6 | Foundry Simple Storage](https://www.youtube.com/watch?v=umepbfKp5rI&t=22979s)*
+*[🎥 YouTube (6:23:59) | Section 6 | Foundry Simple Storage](https://www.youtube.com/watch?v=umepbfKp5rI&t=22979s)*
 
 - [Foundry Simple Storage](#foundry-simple-storage)
 - [Getting Started](#getting-started)
