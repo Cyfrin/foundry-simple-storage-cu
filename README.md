@@ -180,7 +180,9 @@ forge script script/DeploySimpleStorage.s.sol --private-key <PRIVATE_KEY> --rpc-
 
 ### Prerequisites
 - [foundry-zksync](https://github.com/matter-labs/foundry-zksync)
-  - You'll know you've done it right if you can run `forge-zksync --version` and you see a response like `forge-zksync 0.0.2 (816e00b 2023-03-16T00:05:26.396218Z)`
+  - You'll know you've done it right if you can run `forge --version` and you see a response like `forge 0.0.2 (816e00b 2023-03-16T00:05:26.396218Z)`
+  - If you're unsure whether you're using vanilla or zkSync, note that for zkSync it is `0.0.2`, and for vanilla it is `0.2.0` (these are versions which may change over time).
+
 - [docker](https://docs.docker.com/engine/install/)
   - You'll know you've done it right if you can run `docker --version` and you see a response like `Docker version 20.10.7, build f0df350`
 - [nodejs & npm](https://nodejs.org/en/download/package-manager)
