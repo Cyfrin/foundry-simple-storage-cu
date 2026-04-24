@@ -16,7 +16,7 @@ This is part of the Cyfrin Updraft Solidity Blockchain Course.
   - [zkSync instructions](#zksync-instructions)
     - [Prerequisites](#prerequisites)
     - [Run a local zkSync test node](#run-a-local-zksync-test-node)
-    - [Deploy to zkSync](#deploy-to-zksync)
+    - [Deploy to Local zkSync Node](#deploy-to-local-zksync-node)
 - [Thank you!](#thank-you)
 
 
@@ -179,46 +179,62 @@ forge script script/DeploySimpleStorage.s.sol --private-key <PRIVATE_KEY> --rpc-
 ## zkSync instructions
 
 ### Prerequisites
-- [foundry-zksync](https://github.com/matter-labs/foundry-zksync)
-  - You'll know you've done it right if you can run `forge --version` and you see a response like `forge 0.0.2 (816e00b 2023-03-16T00:05:26.396218Z)`
-  - If you're unsure whether you're using vanilla or zkSync, note that for zkSync it is `0.0.2`, and for vanilla it is `0.2.0` (these are versions which may change over time).
 
-- [docker](https://docs.docker.com/engine/install/)
-  - You'll know you've done it right if you can run `docker --version` and you see a response like `Docker version 20.10.7, build f0df350`
-- [nodejs & npm](https://nodejs.org/en/download/package-manager)
-  - You'll know you've done it right if you can run `node --version` and you see a response like `v14.17.0`
-  - Additionally, you'll know you've done it right if you can run `npm --version` and you see a response like `6.14.13`
-
-
-### Run a local zkSync test node
-
-1. Setup the config
+Install foundry-zksync (includes forge, cast, and anvil-zksync):
 
 ```bash
-npx zksync-cli dev config 
+curl -L https://raw.githubusercontent.com/matter-labs/foundry-zksync/main/install-foundry-zksync | bash
 ```
 
-Select `in-memory node` and no additional plugins.
+Reload your shell:
+```bash
+source ~/.bashrc
+```
 
-2. Run the node
+Verify installation:
+```bash
+forge --version
+```
+
+> **Note:** foundry-zksync and vanilla Foundry cannot be active simultaneously. 
+> To switch back to vanilla Foundry, reinstall it via `foundryup`.
+
+---
+
+## Run a Local zkSync Test Node
+
+Spin up anvil-zksync:
+```bash
+anvil-zksync
+```
+
+This starts a local zkSync node at `http://127.0.0.1:8011` with pre-funded 
+test accounts.
+
+---
+
+## Compile
 
 ```bash
-npx zksync-cli dev start
+forge build --zksync
 ```
 
-If you get an error like: `Command exited with code 1: Error response from daemon: dial unix docker.raw.sock: connect: connection refused`, this means docker is not running. 
+---
 
-### Deploy to zkSync
+## Deploy to Local zkSync Node
 
+Using `forge create`:
 ```bash
-forge create src/SimpleStorage.sol:SimpleStorage --rpc-url  http://127.0.0.1:8011 --private-key xxx --legacy --zksync
+forge create SimpleStorage --rpc-url http://127.0.0.1:8011 --private-key <your_private_key> --broadcast --zksync
 ```
 
-or
+Using `forge script`:
+```bash
+forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8011 --private-key <your_private_key> --broadcast --zksync 
+```
 
-```
-forge script script/DeploySimpleStorage.s.sol --private-key xxx --rpc-url http://127.0.0.1:8011 --legacy --zksync --broadcast
-```
+> **Tip:** All standard forge commands work with zkSync by appending 
+> the `--zksync` flag.
 
 # Thank you!
 
